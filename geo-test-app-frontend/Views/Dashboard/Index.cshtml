@@ -1,0 +1,51 @@
+﻿@page
+@model geo_test_app_frontend.Models.DashboardModel
+
+<div id="dashboard-content-wrapper">
+    <h2>Testing Progress</h2>
+    <!-- DASHBOARD TABLE -->
+    <div class="row">
+        <div class="col-sm-12">
+            <table class="table table-hover table-sm table-striped table-bordered dashboard-table">
+                <thead>
+                    <tr>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.Date)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.SentBy)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.ProjectName)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.ProjectNumber)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.PoNumber)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.ContactName)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.ContactEmail)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.Type)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.Proctor)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.TestingInstructions)</th>
+                        <th>@Html.DisplayNameForInnerType((DashboardItemModel dim) => dim.Notes)</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: dashboardItems">
+                    <tr>
+                        <td data-bind="text: date"></td>
+                        <td data-bind="text: sentBy"></td>
+                        <td data-bind="text: projectName"></td>
+                        <td data-bind="text: projectNumber"></td>
+                        <td data-bind="text: poNumber"></td>
+                        <td data-bind="text: contactName"></td>
+                        <td data-bind="text: contactEmail"></td>
+                        <td data-bind="text: type"></td>
+                        <td data-bind="text: proctor"></td>
+                        <td data-bind="text: testingInstructions"></td>
+                        <td data-bind="text: notes"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+}
+
+@section Scripts {
+    <script src="~/js/dashboard.js"></script>
+}
