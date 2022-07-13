@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - geo_test_app_frontend</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/jquery-plugins/css/jquery-custom-scrollbar.min.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div class="container">
+        <!-- TOP BANNER -->
+        <div class="top-banner">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid d-flex">
+                    <div class="justify-content-left">
+                        <h3 class="m-0">Geotherm USA</h3>
+                    </div>
+                    <div class="justify-content-end">
+                        <partial name="_LoginPartial" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- / TOP BANNER -->
+        <div class="wrapper">
+            <!-- SIDE NAVBAR -->
+            <nav id="sidebar">
+                <ul class="list-unstyled components">
+                    <li><a href="#">Dashboard</a></li>
+                    <li>
+                        <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Report</a>
+                        <ul class="collapse list-unstyled" id="reportSubmenu">
+                            <li><a href="#">Create Log</a></li>
+                            <li><a href="#">Mix Design</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Search DB</a></li>
+                    <li><a href="#">Calculators</a></li>
+                    <li><a href="#">AP Emails</a></li>
+                </ul>
+            </nav>
+            <!-- / SIDE NAVBAR -->
+            <!-- MAIN BODY CONTENT -->
+            <div id="content">
+                
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+            <!-- / MAIN BODY CONTENT -->
+        </div>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - geo_test_app_frontend - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/knockout/js/knockout_3.5.1.js"></script>
+    <script src="~/lib/jquery-plugins/js/jquery-mousewheel.min.js"></script>
+    <script src="~/lib/jquery-plugins/js/jquery-custom-scrollbar.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
