@@ -1,0 +1,117 @@
+﻿@page
+@model geo_test_app_frontend.Models.CreateLogModel
+
+<div id="createLog-content-wrapper">
+    <h2>Create Log</h2>
+    <form>
+        <!-- DATE -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputDate">Date</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- SENT BY -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputSentBy">Sent By</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- PROJECT NAME -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputProjectName">Project Name</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- PROJECT NUMBER -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputProjectNumber">Project Number</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- PO NUMBER -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputPoNumber">PO Number</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- CONTACT NAME -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputContactName">Contact Name</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- CONTACT EMAIL -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputContactEmail">Contact Email</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- NUMBER OF BOXES / BUCKETS -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputBoxesBuckets"># Boxes / Buckets</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- NUMBER OF SAMPLES -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputSamples"># of Samples</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- Maerial Type -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputMaterialType">Material Type</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <select class="custom-select">
+                    <option selected>Choose...</option>
+                    <option value="1">Native Soil</option>
+                    <option value="2">Pre-Cast</option>
+                </select>
+            </div>
+        </div>
+        <!-- NOTES -->
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label" for="inputNotes">Notes</label>
+            <div class="col-sm-10 col-md-6 col-lg-4">
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+        <!-- PROCTOR -->
+        <div class="form-group row">
+            <label class="offset-sm-2 col-sm-1 col-form-label" for="date">
+                Proctor?
+                <input class="pl-1" type="checkbox" />
+            </label>
+                
+        <!-- INSTRUCTIONS CONFIRMED -->
+            <label class="col-sm-2 col-form-label" for="date">
+                Instructions Confirmed?
+                <input class="pl-1" type="checkbox" />
+            </label>
+        <!-- RUSH -->
+            <label class="col-sm-1 col-form-label" for="date">
+                Rush?
+                <input class="pl-1" type="checkbox" />
+            </label>
+        </div>
+        <!-- SUBMIT BUTTON -->
+        <div class="form-group row">
+            <div class="offset-sm-2 col-sm-10 col-md-6 col-lg-4">
+                <button class="btn btn-geotherm">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script src="~/js/createlog.js"></script>
+}

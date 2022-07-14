@@ -79,10 +79,13 @@ body {
 @import "https://fonts.googleapis.com/css?family=OpenSans:300,400,500,600,700";
 
 :root {
+    /* heights */
     --top-banner-height: 70px;
+    /* widths */
+    --sidebar-width: 250px;
+    /* colors */
     --geotherm-red: #dd3333;
     --geotherm-dark-red: #aa0000;
-    --sidebar-width: 250px;
 }
 
 /* ---------------------------------------------------
@@ -94,7 +97,7 @@ body {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -111,12 +114,9 @@ a:focus {
 
 .navbar {
     padding: 15px 10px;
-/*    background: #fff;*/    
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
-/*    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); */
-
 }
 
 .navbar-btn {
@@ -257,11 +257,31 @@ ul ul a {
 }
 
 /* ---------------------------------------------------
+    LOGO STYLE
+----------------------------------------------------- */
+.logo-wrapper {
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
+}
+
+.logo-wrapper img {
+    max-height: 42px;
+}
+
+/* ---------------------------------------------------
     MEDIA QUERIES
 ----------------------------------------------------- */
 
 @media (max-width: 768px) {
+    .top-banner {
+        display: none;
+    }
+
     #sidebar {
+        top: 0;
+        height: 100vh;
         margin-left: calc(0 - var(--sidebar-width));
     }
 
@@ -270,6 +290,7 @@ ul ul a {
         }
 
     #content {
+        margin-top: 0;
         width: 100%;
     }
 

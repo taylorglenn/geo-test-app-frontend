@@ -18,7 +18,7 @@
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid d-flex">
                     <div class="justify-content-left">
-                        <h3 class="m-0">Geotherm USA</h3>
+                        <partial name="_Logo" />
                     </div>
                     <div class="justify-content-end">
                         <partial name="_LoginPartial" />
@@ -31,17 +31,17 @@
             <!-- SIDE NAVBAR -->
             <nav id="sidebar">
                 <ul class="list-unstyled components">
-                    <li><a href="#">Dashboard</a></li>
+                    <li id="dashboardTab"><a href="/dashboard">Dashboard</a></li>
+                    <li id="createLogTab"><a href="/createLog">Create Log</a></li>
                     <li>
                         <a href="#reportSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Report</a>
                         <ul class="collapse list-unstyled" id="reportSubmenu">
-                            <li><a href="#">Create Log</a></li>
-                            <li><a href="#">Mix Design</a></li>
+                            <li id="mixDesignTab"><a href="#">Mix Design</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Search DB</a></li>
-                    <li><a href="#">Calculators</a></li>
-                    <li><a href="#">AP Emails</a></li>
+                    <li id="searchDbTab"><a href="#">Search DB</a></li>
+                    <li id="calculatorsTab"><a href="#">Calculators</a></li>
+                    <li id="apEmailsTab"><a href="#">AP Emails</a></li>
                 </ul>
             </nav>
             <!-- / SIDE NAVBAR -->
