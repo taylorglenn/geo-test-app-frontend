@@ -76,6 +76,7 @@ function initDashboardViewModel() {
 }
 
 $(document).ready(function () {
+    makeActive('dashboardTab'); // on site.js
     loadAndBindDashboardViewModel();
     initDashboardViewModel();
 });

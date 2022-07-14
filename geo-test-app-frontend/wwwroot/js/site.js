@@ -3,10 +3,17 @@
 
 // Write your JavaScript code.
 
+/*  global functions
+    -------------------------------------------------- */
+function makeActive(tabname) {
+    $('li.active').removeClass('active'); // scrub all active classes from all tabs
+    $(`#${tabname}`).addClass('active'); // make this tab active
+}
+
 $(document).ready(function () {
     /*  custom scrollbar stuff
     -------------------------------------------------- */
-    $("#sidebar").mCustomScrollbar({
+    $('#sidebar').mCustomScrollbar({
         theme: "minimal"
     });
 });
