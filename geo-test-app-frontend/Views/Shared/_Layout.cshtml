@@ -1,35 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>@ViewData["Title"] - geo_test_app_frontend</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/lib/jquery-plugins/css/jquery-custom-scrollbar.min.css" />
-
+    
     <link rel="stylesheet" href="~/css/site.css" />
 
     @RenderSection("Styles", required: false)
 </head>
 <body>
     <div class="container">
-        <!-- TOP BANNER -->
-        <div class="top-banner">
-            <nav class="navbar navbar-expand-lg">
-                <div class="container-fluid d-flex">
-                    <div class="justify-content-left">
-                        <partial name="_Logo" />
-                    </div>
-                    <div class="justify-content-end">
-                        <partial name="_LoginPartial" />
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- / TOP BANNER -->
         <div class="wrapper">
-            <!-- SIDE NAVBAR -->
+            <!-- SIDEBAR -->
             <nav id="sidebar">
+                <div class="sidebar-header">
+                    <partial name="_Logo" />
+                </div>
+
                 <ul class="list-unstyled components">
                     <li id="dashboardTab"><a href="/dashboard">Dashboard</a></li>
                     <li id="createLogTab"><a href="/createLog">Create Log</a></li>
@@ -44,15 +37,27 @@
                     <li id="apEmailsTab"><a href="#">AP Emails</a></li>
                 </ul>
             </nav>
-            <!-- / SIDE NAVBAR -->
+            
             <!-- MAIN BODY CONTENT -->
             <div id="content">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                        <button type="button" id="sidebarCollapse" class="btn btn-geotherm">
+                            <i class="fas fa-align-left"></i>
+                            <span>Toggle Sidebar</span>
+                        </button>
+                    
+                        <div class="justify-content-end">
+                            <partial name="_LoginPartial" />
+                        </div>
+                    </div>
+                </nav>
                 
                 <main role="main" class="pb-3">
                     @RenderBody()
                 </main>
             </div>
-            <!-- / MAIN BODY CONTENT -->
         </div>
     </div>
 
@@ -62,10 +67,15 @@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/popper/popper.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/lib/knockout/js/knockout_3.5.1.js"></script>
     <script src="~/lib/jquery-plugins/js/jquery-mousewheel.min.js"></script>
     <script src="~/lib/jquery-plugins/js/jquery-custom-scrollbar.min.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
     <script src="~/js/site.js" asp-append-version="true"></script>
 
