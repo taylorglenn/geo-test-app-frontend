@@ -23,4 +23,9 @@ $(document).ready(function () {
         $('.collapse.in').toggleClass('in');
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
+
+    $('#sidebar ul > li > a').on('click', function () {
+        $('#sidebar ul > li > a > svg').remove();
+        $(this).append('<i class="fas fa-spinner fa-spin ml-3"></i>');
+    })
 });
