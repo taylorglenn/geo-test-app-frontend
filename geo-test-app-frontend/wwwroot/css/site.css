@@ -79,13 +79,12 @@ body {
 @import "https://fonts.googleapis.com/css?family=OpenSans:300,400,500,600,700";
 
 :root {
-    /* heights */
-    --top-banner-height: 70px;
     /* widths */
     --sidebar-width: 250px;
     /* colors */
-    --geotherm-red: #dd3333;
-    --geotherm-dark-red: #aa0000;
+    --geotherm-red: #dd3333; /* 53% red */
+    --geotherm-light-red: #e15151; /* 60% red */
+    --geotherm-dark-red: #ae1e1e; /* 405 red */
 }
 
 /* ---------------------------------------------------
@@ -114,9 +113,11 @@ a:focus {
 
 .navbar {
     padding: 15px 10px;
+    background: #fff;
     border: none;
     border-radius: 0;
     margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-btn {
@@ -133,22 +134,6 @@ a:focus {
 }
 
 /* ---------------------------------------------------
-    BANNER STYLE
------------------------------------------------------ */
-.top-banner {
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: #fff;
-    background-color: var(--geotherm-dark-red);
-    height: var(--top-banner-height);
-    z-index: 1000;
-    width: 100%;
-    overflow: hidden;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-/* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
@@ -160,17 +145,17 @@ a:focus {
 #sidebar {
     width: var(--sidebar-width);
     position: fixed;
-    top: var(--top-banner-height);
+    top: 0;
     left: 0;
-    height: calc(100vh - var(--top-banner-height));
+    height: 100vh;
     z-index: 999;
     background: var(--geotherm-red);
     color: #fff;
     transition: all 0.3s;
 }
 
-    #sidebar.active {
-        margin-left: calc(0 - var(--sidebar-width));
+   #sidebar.active {
+        margin-left: calc(-1 * var(--sidebar-width));
     }
 
     #sidebar .sidebar-header {
@@ -229,9 +214,9 @@ ul ul a {
 
 #content {
     width: calc(100% - var(--sidebar-width));
-    margin-top: var(--top-banner-height);
+    margin-top: 0;
     padding: 10px 40px 0 40px;
-    min-height: calc(100vh - var(--top-banner-height));
+    min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
     top: 0;
@@ -260,6 +245,7 @@ ul ul a {
     LOGO STYLE
 ----------------------------------------------------- */
 .logo-wrapper {
+    display: inline-block;
     background-color: #fff;
     padding: 2px;
     border-radius: 4px;
@@ -267,7 +253,7 @@ ul ul a {
 }
 
 .logo-wrapper img {
-    max-height: 42px;
+    max-height: 2.2em;
 }
 
 /* ---------------------------------------------------
@@ -282,7 +268,7 @@ ul ul a {
     #sidebar {
         top: 0;
         height: 100vh;
-        margin-left: calc(0 - var(--sidebar-width));
+        margin-left: calc(-1 * var(--sidebar-width));
     }
 
         #sidebar.active {
